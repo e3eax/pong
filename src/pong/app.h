@@ -11,6 +11,15 @@ namespace App {
 
 static bool running = true;
 
+/**
+ * @brief Window procedure callback function for handling window messages.
+ * 
+ * @param window A handle to the window.
+ * @param message The message to be processed.
+ * @param wparam Additional message information.
+ * @param lparam Additional message information.
+ * @return The result of the message processing.
+ */
 LRESULT CALLBACK
 window_callback(HWND window, UINT message, WPARAM wparam, LPARAM lparam)
 {
@@ -30,6 +39,12 @@ window_callback(HWND window, UINT message, WPARAM wparam, LPARAM lparam)
   return result;
 }
 
+/**
+ * @brief Initializes the window class.
+ * 
+ * @param instance A handle to the instance of the application.
+ * @param wc A pointer to a WNDCLASS structure.
+ */
 void
 init_window(HINSTANCE instance, WNDCLASS* wc)
 {
@@ -41,6 +56,13 @@ init_window(HINSTANCE instance, WNDCLASS* wc)
   RegisterClass(wc);
 }
 
+/**
+ * @brief Creates the application window.
+ * 
+ * @param instance A handle to the instance of the application.
+ * @param wc A pointer to a WNDCLASS structure.
+ * @param window A reference to a handle to the window.
+ */
 void
 create_window(HINSTANCE& instance, WNDCLASS* wc, HWND& window)
 {
