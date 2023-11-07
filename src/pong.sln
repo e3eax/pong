@@ -1,9 +1,9 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pong", "pong\pong.vcxproj", "{4197CA58-B720-41CC-B0CC-7D50559772B3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pong-learning", "pong-learning\pong-learning.vcxproj", "{EC523B32-E93A-4AA4-8423-DE2616702C3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,17 +13,17 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4197CA58-B720-41CC-B0CC-7D50559772B3}.Debug|x64.ActiveCfg = Debug|x64
-		{4197CA58-B720-41CC-B0CC-7D50559772B3}.Debug|x64.Build.0 = Debug|x64
-		{4197CA58-B720-41CC-B0CC-7D50559772B3}.Debug|x86.ActiveCfg = Debug|x64
-		{4197CA58-B720-41CC-B0CC-7D50559772B3}.Release|x64.ActiveCfg = Release|x64
-		{4197CA58-B720-41CC-B0CC-7D50559772B3}.Release|x64.Build.0 = Release|x64
-		{4197CA58-B720-41CC-B0CC-7D50559772B3}.Release|x86.ActiveCfg = Release|x64
+		{EC523B32-E93A-4AA4-8423-DE2616702C3F}.Debug|x64.ActiveCfg = Debug|x64
+		{EC523B32-E93A-4AA4-8423-DE2616702C3F}.Debug|x64.Build.0 = Debug|x64
+		{EC523B32-E93A-4AA4-8423-DE2616702C3F}.Debug|x86.ActiveCfg = Debug|x64
+		{EC523B32-E93A-4AA4-8423-DE2616702C3F}.Release|x64.ActiveCfg = Release|x64
+		{EC523B32-E93A-4AA4-8423-DE2616702C3F}.Release|x64.Build.0 = Release|x64
+		{EC523B32-E93A-4AA4-8423-DE2616702C3F}.Release|x86.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {751FA153-CB0D-49BF-9855-2BE02E33C9EE}
+		SolutionGuid = {983C37C4-99B4-4B40-9AAC-8AE3AB24F3BF}
 	EndGlobalSection
 EndGlobal
