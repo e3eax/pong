@@ -5,24 +5,23 @@
 
 typedef uint32_t u32;
 
-#include "renderer.h"
+#include "render.h"
 
 namespace App {
 
 static bool running = true;
 
 LRESULT CALLBACK
-main_window_callback(HWND window, UINT message, WPARAM wparam, LPARAM lparam)
+window_callback(HWND window, UINT message, WPARAM wparam, LPARAM lparam)
 {
   LRESULT result = 0;
 
   switch (message) {
-    case WM_CLOSE:
     case WM_DESTROY:
       running = false;
       break;
     case WM_SIZE:
-      Renderer::calc_window_buffer(window);
+      Render::calc_buffer(window);
       break;
     default:
       result = DefWindowProc(window, message, wparam, lparam);
@@ -32,11 +31,11 @@ main_window_callback(HWND window, UINT message, WPARAM wparam, LPARAM lparam)
 }
 
 void
-init_window(HINSTANCE& instance, WNDCLASS* wc)
+init_window(HINSTANCE instance, WNDCLASS* wc)
 {
   wc->hInstance = instance;
+  wc->lpfnWndProc = window_callback;
   wc->style = CS_HREDRAW | CS_VREDRAW;
-  wc->lpfnWndProc = main_window_callback;
   wc->lpszClassName = "PongWindowClass";
 
   RegisterClass(wc);
@@ -51,7 +50,7 @@ create_window(HINSTANCE& instance, WNDCLASS* wc, HWND& window)
                         CW_USEDEFAULT,
                         CW_USEDEFAULT,
                         1280,
-                        720,
+                        950,
                         0,
                         0,
                         instance,
