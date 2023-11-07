@@ -10,21 +10,29 @@ WinMain(HINSTANCE instance,
   WNDCLASS window_class = {};
 
   App::init_window(instance, &window_class);
+
   App::create_window(instance, &window_class, window);
 
-  HDC dc = GetDC(window);
+  HDC hdc = GetDC(window);
 
   while (App::running) {
 
     MSG message;
-
     while (PeekMessage(&message, window, 0, 0, PM_REMOVE)) {
       TranslateMessage(&message);
       DispatchMessage(&message);
     }
 
-    Renderer::clear_screen(0xaa00aa);
+    // Render::clear_screen(0x000081);
+    Render::clear_screen(0xababab);
 
-    Renderer::render(dc);
+    // Render::pattern(0xffffff, 800, 800);
+    Render::rect_center(20, 20, 0x00000f);
+    Render::rect_vertical(50, 50, 250, 0x0000ff);
+    Render::rect_vertical(-50, 50, 250, 0x0000ff);
+    Render::rect_horizontal(50, 250, 50, 0x0000ff);
+    Render::rect_horizontal(-50, 250, 50, 0x0000ff);
+
+    Render::render(hdc);
   }
 }
